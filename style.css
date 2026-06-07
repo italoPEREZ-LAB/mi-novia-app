@@ -23,6 +23,16 @@ overflow:hidden;
 
 font-family:Arial;
 
+h1{
+    color: white;
+    font-size: 55px;
+    font-family: 'Pacifico', cursive;
+    text-shadow:
+    0 0 10px #ff69b4,
+    0 0 20px #ff1493,
+    0 0 40px #ff1493;
+}
+
 }
 
 .container{
@@ -93,16 +103,76 @@ height:300px;
 
 object-fit:cover;
 
-clip-path:
-polygon(
-50% 0%,
-100% 35%,
-80% 100%,
-50% 80%,
-20% 100%,
-0% 35%
-);
+border-radius:20px;
 
-box-shadow:
-0 0 30px hotpink;
+box-shadow:0 0 30px hotpink;
+
+animation: palpito 1.2s ease-in-out infinite;
+
 }
+
+/* Efecto corazón latiendo */
+
+@keyframes palpito {
+
+0%{
+transform: scale(1);
+box-shadow:0 0 20px hotpink;
+}
+
+15%{
+transform: scale(1.12);
+box-shadow:0 0 40px #ff1493;
+}
+
+30%{
+transform: scale(1);
+box-shadow:0 0 20px hotpink;
+}
+
+45%{
+transform: scale(1.15);
+box-shadow:0 0 50px #ff1493;
+}
+
+60%{
+transform: scale(1);
+box-shadow:0 0 20px hotpink;
+}
+
+100%{
+transform: scale(1);
+box-shadow:0 0 20px hotpink;
+}
+
+}
+
+#final p{
+
+font-size:32px;
+
+color:white;
+
+font-weight:bold;
+
+text-shadow:
+0 0 10px #ff69b4,
+0 0 20px #ff1493;
+
+animation: aparecer 2s ease-in-out;
+
+}
+@keyframes aparecer{
+
+0%{
+opacity:0;
+transform:translateY(50px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
